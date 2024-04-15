@@ -33,9 +33,10 @@ def get_employee_todo_list_progress():
     for task in todo_data:
         task_title = task.get('title')
         task_status = task.get('completed')
-        task_dict = {"task": task_title,
+        task_dict = {"username": user_name,
                      "completed": task_status,
-                     "username": user_name}
+                     "task": task_title
+                     }
         task_list.append(task_dict)
 
         all_tasks[str(user_id)] = task_list
