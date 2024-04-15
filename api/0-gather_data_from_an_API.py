@@ -29,7 +29,7 @@ def get_employee_todo_list_progress(employee_id):
                                for task in todo_data)
 
     # print first line
-    print("Employee {} is done with tasks ({}/{}):".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         employee_name, number_of_done_tasks, total_number_of_tasks), end='\n')
 
     # print second and N next line:
