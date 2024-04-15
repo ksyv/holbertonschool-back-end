@@ -34,8 +34,8 @@ def get_employee_todo_list_progress():
         task_title = task.get('title')
         task_status = task.get('completed')
         task_dict = {"username": user_name,
-                     "completed": task_status,
-                     "task": task_title
+                     "task": task_title,
+                     "completed": task_status
                      }
         task_list.append(task_dict)
 
