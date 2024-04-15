@@ -28,18 +28,18 @@ def get_employee_todo_list_progress():
         todos_return = requests.get(f'{base_url}/todos?userId={user_id}')
         todo_data = todos_return.json()
 
-    # Create JSON data format
-    task_list = []
-    for task in todo_data:
-        task_title = task.get('title')
-        task_status = task.get('completed')
-        task_dict = {"username": user_name,
-                     "task": task_title,
-                     "completed": task_status
-                     }
-        task_list.append(task_dict)
+        # Create JSON data format
+        task_list = []
+        for task in todo_data:
+            task_title = task.get('title')
+            task_status = task.get('completed')
+            task_dict = {"username": user_name,
+                         "task": task_title,
+                         "completed": task_status
+                         }
+            task_list.append(task_dict)
 
-        all_tasks[str(user_id)] = task_list
+            all_tasks[str(user_id)] = task_list
 
     # Write to JSON file
     json_filename = 'todo_all_employees.json'
