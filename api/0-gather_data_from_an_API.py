@@ -6,7 +6,7 @@ import requests
 import sys
 
 
-def get_employee_TODO_list_progress(employee_id):
+def get_employee_todo_list_progress(employee_id):
     """_summary_
 
     Args:
@@ -43,4 +43,4 @@ if __name__ == '__main__':
         print("Usage: python3 0-gather_data_from_an_API.py <employee_id>")
         sys.exit(1)
     employee_id = int(sys.argv[1])
-    get_employee_TODO_list_progress(employee_id)
+    get_employee_todo_list_progress(employee_id)
