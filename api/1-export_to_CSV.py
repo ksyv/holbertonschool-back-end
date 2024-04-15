@@ -39,8 +39,6 @@ def get_employee_todo_list_progress(employee_id):
                              task.get('title')]
             csv_writer.writerow(formatted_row)
 
-    print(f'Data exported to {csv_filename}')
-
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
