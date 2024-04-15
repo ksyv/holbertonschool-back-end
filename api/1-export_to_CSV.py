@@ -19,7 +19,7 @@ def get_employee_todo_list_progress(employee_id):
     # userdata for get employee name with id:
     user_return = requests.get(user_url)
     user_data = user_return.json()
-    employee_name = user_data.get('name')
+    user_name = user_data.get('username')
 
     # Task data for get number of done tasks and total number of tasks
     todo_return = requests.get(todo_url)
@@ -34,7 +34,7 @@ def get_employee_todo_list_progress(employee_id):
             task_completed_status = 'True' if task.get('completed')\
                                     else 'False'
             formatted_row = [employee_id,
-                             employee_name,
+                             user_name,
                              task_completed_status,
                              task.get('title')]
             csv_writer.writerow(formatted_row)
